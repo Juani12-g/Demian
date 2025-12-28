@@ -81,6 +81,7 @@ const images = [
   "nota.png",
   "bal.png",
   "bnn.png",
+  "flor.png"
 
 ];
 
