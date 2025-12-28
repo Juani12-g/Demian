@@ -7,14 +7,12 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-/* ⭐ ESTRELLAS FIJAS */
 const stars = Array.from({ length: 120 }, () => ({
   x: Math.random() * canvas.width,
   y: Math.random() * canvas.height,
   r: Math.random() * 1.5
 }));
 
-/* ☄️ ESTRELLAS FUGACES */
 let meteors = [];
 
 function drawStars() {
@@ -60,29 +58,29 @@ drawStars();
 
 /* 🖼️ IMÁGENES */
 const images = [
-  "assets/cafe.png",
-  "assets/cancha.png",
-  "assets/oveja.png",
-  "assets/perrita.png",
-  "assets/renault.png",
-  "assets/vaca.png",
-  "assets/vino.png",
-  "assets/tractor.png",
-  "assets/campo.png",
-  "assets/caballo.png",
-  "assets/escudo.png",
-  "assets/mate.png",
-  "assets/fernet.png",
-  "assets/gym.png",
-  "assets/alfajor.png",
-  "assets/hamster2.png",
-  "assets/shakker.png",
-  "assets/cafecito.png",
-  "assets/frutillas.png",
-  "assets/monster.png",
-  "assets/nota.png",
-  "assets/bal.png",
-  "assets/bnn.png",
+  "cafe.png",
+  "cancha.png",
+  "oveja.png",
+  "perrita.png",
+  "renault.png",
+  "vaca.png",
+  "vino.png",
+  "tractor.png",
+  "campo.png",
+  "caballo.png",
+  "escudo.png",
+  "mate.png",
+  "fernet.png",
+  "gym.png",
+  "alfajor.png",
+  "hamster2.png",
+  "shakker.png",
+  "cafecito.png",
+  "frutillas.png",
+  "monster.png",
+  "nota.png",
+  "bal.png",
+  "bnn.png",
 
 ];
 
@@ -96,17 +94,15 @@ setInterval(createHeart, 900);
   spawnNextImage();
 });
 
-/* aparece de a una */
 function spawnNextImage() {
   if (index >= images.length) return;
 
   createParticle(images[index]);
   index++;
 
-  setTimeout(spawnNextImage, 1200); // ⏱️ delay entre imágenes
+  setTimeout(spawnNextImage, 1200); 
 }
 
-/* crear imagen */
 function createParticle(src) {
   const el = document.createElement("div");
   el.className = "particle";
@@ -122,7 +118,7 @@ function createParticle(src) {
   particles.push(el);
 }
 
-/* flotan siempre */
+
 function animateParticles() {
   particles.forEach(p => {
     p.x += p.vx;
@@ -139,7 +135,6 @@ function animateParticles() {
 
 animateParticles();
 
-/* resize */
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
