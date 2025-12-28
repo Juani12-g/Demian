@@ -56,7 +56,6 @@ function spawnMeteor() {
 setInterval(spawnMeteor, 1400);
 drawStars();
 
-/* 🖼️ IMÁGENES */
 const images = [
   "cafe.png",
   "cancha.png",
@@ -81,7 +80,7 @@ const images = [
   "nota.png",
   "bal.png",
   "bnn.png",
-  "flor.png"
+  "flor.png",
 
 ];
 
